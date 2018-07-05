@@ -11,7 +11,10 @@ import android.security.keystore.KeyPermanentlyInvalidatedException;
 import android.security.keystore.KeyProperties;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v4.app.ActivityCompat;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import java.io.IOException;
 import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
@@ -41,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         //Verificado que se use API 23 o mayor
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             //Obteniendo instancia de keyguardManager y fingerprintManager

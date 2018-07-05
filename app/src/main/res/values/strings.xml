@@ -3,4 +3,5 @@
     <string name="instructions">
 Place your fingertip on the Home button to verify your identity
 </string>
+    <string name="title_activity_main2">Main2Activity</string>
 </resources>

@@ -2,12 +2,14 @@ package pucp.edu.pe.fingerprintauth;
 
 import android.annotation.TargetApi;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.fingerprint.FingerprintManager;
 import android.Manifest;
 import android.os.Build;
 import android.os.CancellationSignal;
 import android.support.v4.app.ActivityCompat;
+import android.widget.Button;
 import android.widget.Toast;
 
 @TargetApi(Build.VERSION_CODES.M)
@@ -56,6 +58,7 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
             FingerprintManager.AuthenticationResult result) {
 
         Toast.makeText(context, "Success!", Toast.LENGTH_LONG).show();
+        context.startActivity(new Intent(context,Main2Activity.class));
     }
 
 }
